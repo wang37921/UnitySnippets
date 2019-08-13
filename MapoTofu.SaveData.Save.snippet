@@ -18,10 +18,6 @@
       </Imports>
       <Declarations>
         <Literal>
-          <ID>dataType</ID>
-          <Default>DataType</Default>
-        </Literal>
-        <Literal>
           <ID>identifier</ID>
           <Default>"identifier"</Default>
         </Literal>
@@ -40,7 +36,7 @@
       </Declarations>
       <Code Language="CSharp">
         <![CDATA[
-        SaveData.Save<$dataType$>($identifier$, $data$, $encoding$, $password$);
+        SaveData.Save($identifier$, $data$, $encoding$, $password$);
         ]]>
       </Code>
     </Snippet>
