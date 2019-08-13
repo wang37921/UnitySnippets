@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>SaveData.Load</Title>
+      <Author>Cong Wang</Author>
+      <Shortcut>load</Shortcut>
+      <Description>Load Data using MapoTofu.SaveData</Description>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Text</Namespace>
+        </Import>
+        <Import>
+          <Namespace>MapoTofu.SaveData</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>returnData</ID>
+          <Default>Data</Default>
+        </Literal>
+        <Literal>
+          <ID>dataType</ID>
+          <Default>DataType</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <Default>"identifier"</Default>
+        </Literal>
+        <Literal>
+          <ID>defaultData</ID>
+          <Default>defaultData</Default>
+        </Literal>
+        <Literal>
+          <ID>encoding</ID>
+          <Default>Encoding.UTF8</Default>
+        </Literal>
+        <Literal>
+          <ID>password</ID>
+          <Default>null</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+        $returnData$ = SaveData.Load<$dataType$>($identifier$, $defaultData$, $encoding$, $password$);
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
