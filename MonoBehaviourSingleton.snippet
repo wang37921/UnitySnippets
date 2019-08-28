@@ -26,10 +26,13 @@
           public static $classname$ Instance { get; private set; }
           public static $classname$ NewInstance()
           {
-            var go = new GameObject("$classname$");
+            var go = new GameObject("$classname$", typeof($classname$));
             DontDestroyOnLoad(go);
-            Instance = go.AddComponent<$classname$>();
             return Instance;
+          }
+          private void Awake()
+          {
+            Instance = this;
           }
         }
         ]]>
